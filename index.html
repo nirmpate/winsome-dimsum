@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<!-- 
+		I399 Web Development
+		Nirmal Patel
+
+		Project 5: Modular Design
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Project 5: Modular Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+		
+		<!-- Stylesheets -->
+		<script src="https://use.fontawesome.com/a686b3c76b.js"></script>
+		<link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all">
+
+		<!--[if lt IE 9]>
+    		<script src="assets/components/html5shiv/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body id="home">
+
+
+	<div class="navWrapper">
+	<nav>
+		<div class="wrapper">
+			<div class="logo"><a href="index.html"><img src="assets/images/header-logo@2x.png" alt="Small Logo"></a></div>
+
+			<!--Hamburger Menu -->
+			<input type="checkbox" id="menu-toggle">
+	      		<label for="menu-toggle" class="label-toggle"></label>
+
+			<ul class="navItems"><!--Flex Container -->
+			 	<li><a class="active" href="index.html">Home</a></li> <!--Flex Items -->
+			 	<li><a href="#">About</a></li>
+				<li><a href="#" >News</a></li>
+			 	<li><a href="contact.html" >Contact</a></li>
+
+			</ul>
+		</div>
+	 </nav>
+	 </div><!--End of nav wrapper -->
+
+	 <header>
+	 	<div id="bkg"></div>
+	 	<section>
+	 		<div class="branding">
+	 			<img class="logo" src="assets/images/wsds-logo.png" alt="Win Some Dim Sum Logo"/>
+	 			<h2>B-Town's Original Dumplings</h2>
+	 		</div>
+	 	</section>
+
+	 </header>
+
+	 <main>
+	 	<h1>MENU</h1>
+	 	<section>
+	 		<div class="menuButtons"><!--Flex Container -->
+		 		<a class="ghost-button" href="javascript:void(0);" onclick="viewDim()">DIM SUM</a>
+		 		<a class="ghost-button" href="javascript:void(0);" onclick="viewSpecialty()">SPECIALTY</a>
+		 		<a class="ghost-button" href="javascript:void(0);" onclick="viewBeverages()">BEVERAGES</a>
+	 		</div>
+
+	 		<div class="menuContainer active" id="dimSum">
+	 			<div class="item">
+	 				<h3>Shrimp &amp; Pork Dumpling (Siu Mai)</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Shrimp Dumpling (Har Gow)</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Stuffed Pork (Football)</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Bao Chicken Bao Bao</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Baked BBQ Pork Bun</h3>
+	 				<p class="price">$1.45</p>
+	 				<p class="description">1 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Steamed Pork & Cabbage Bun</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Chicken Potsticker</h3>
+	 				<p class="price">$2.85</p>
+	 				<p class="description">3 pieces per order </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Green Onion Roll</h3>
+	 				<p class="price">$1.40</p>
+	 				<p class="description">1 piece per order </p>
+	 			</div>
+
+
+	 		</div>
+
+	 		<div class="menuContainer" id="specialty">
+	 			<div class="item">
+	 				<h3>Wonton Noodle Soup</h3>
+	 				<p class="price">$7.75</p>
+	 				<p class="description">by the bowl</p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Veggie Fried Rice</h3>
+	 				<p class="price">$3.85</p>
+	 				<p class="description">various sizes </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>GO BOWL - Curry Chicken</h3>
+	 				<p class="price">$6.50</p>
+	 				<p class="description">ready to go and comes with soda </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>GO BOWL – Teriyaki Chicken</h3>
+	 				<p class="price">$6.55</p>
+	 				<p class="description">ready to go and comes with soda </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>HK Beef Stew</h3>
+	 				<p class="price">S-$5.50, M-$7.75, L-$9.75</p>
+	 				<p class="description">various sizes </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Mega Rice Pot - Spareribs Sausage</h3>
+	 				<p class="price">$6.50</p>
+	 				<p class="description">served with House Soy Sauce </p>
+	 			</div>
+
+
+	 		</div>
+
+	 		<div class="menuContainer" id="beverages">
+	 			<div class="item">
+	 				<h3>Hong Kong Lemon Iced Tea</h3>
+	 				<p class="price">R-$2.00, L-$2.50</p>
+	 				<p class="description">Refreshing Iced Tea with Lemon and Sugar </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>G-Jelly Milk Tea</h3>
+	 				<p class="price">$2.00</p>
+	 				<p class="description">House milk served with grass jelly </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Poppin’ Ice Tea</h3>
+	 				<p class="price">R-$2.50, L-$3.00</p>
+	 				<p class="description">Signature ice tea with bursts of flavor </p>
+	 			</div>
+	 			<div class="item">
+	 				<h3>Soda</h3>
+	 				<p class="price">R-$2.50, L-$3.00</p>
+	 				<p class="description">Coca Cola Products  </p>
+	 			</div>
+
+	 		</div>
+	 	</section>
+	 </main>
+
+	<footer>
+			<div class="info"> <!-- Flex Container -->
+
+				<section><!-- Flex Item -->
+					<h2>Contact</h2>
+					
+					<address>105 N. College Avenue
+					Bloomington, IN 47404</address>
+					<p>123.456.7890</p>
+					<a href="mailto:info@winsomedimsum.com">info@winsomedimsum.com</a>
+				</section>
+
+				<section>
+					<h2>Hours</h2>
+					<p>Mon - Thu 5:00 pm - 10:00 pm</p>
+					<p>Fri - Sat 5:00 pm - 11:00 pm</p>
+					<p>Sun 5:00 pm - 9:00 pm</p>
+				</section>
+
+				<section>
+					<h2>Social Media</h2>
+					<div class="smIcons">
+					<a href=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+					</div>
+				</section>
+			</div> <!--Flex close -->
+		</footer>
+
+
+		
+		
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

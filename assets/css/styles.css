@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+
+/* Project 5: Modular Design: styles.css */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+/*Content Wrapper */
+.wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 0 2%;
+}
+
+nav .wrapper {
+	max-width: 960px;
+	align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navWrapper {
+	height: 60px;
+}
+
+/*
+	Typography
+*/
+
+h1, h2, h3, h4, h5, h6, p, td, li, figcaption, address, a {
+	font-family: 'Lato', sans-serif;
+}
+
+h1,h2 {
+	font-weight: normal;
+	letter-spacing: 4px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color:#000;
+}
+
+footer a:link, footer a:visited {
+	color:#FF5254;
+}
+
+a:active, a:hover {
+	color: #AA5254;
+	transition: .2s;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+.price {
+	font-size: 14px;
+}
+
+/* 
+	Navigation 
+*/
+
+
+/* 
+	I found a good example for a flex box navigation.  Pure CSS and no Javascript.
+
+	http://blog.christopherianmurphy.com/2016/01/responsive-pure-css-menu.html */
+
+nav {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	min-width: 100%;
+	box-shadow: #555 0px 0px 20px 0px;
+	z-index: 100;
+
+}
+
+nav .logo {
+  display: inline-block;
+}
+
+nav .logo img {
+	width:45px;
+	height: 45px;
+	margin-top: .3em;
+  	margin-bottom: .3em;
+}
+
+ul {
+	display: flex;  /*Adding Flex to vertically center list items */
+    justify-content: space-between;
+    min-width: 50%;
+
+	list-style-type: none;
+	color:#000;
+	margin:0;
+}
+
+ul li a {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+
+
+ul li a {
+	color: #000;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	padding: 0px 16px;
+	transition: 0.2s;
+}
+
+
+/*Keep hamburger menu hidden until it hits break point */
+#menu-toggle {display: none;}
+
+.label-toggle {display: none;}
+
+
+
+ul li a.active {
+	color: #FF5254;
+	position: relative;
+
+}
+
+ul li a:hover   {
+	color: #FF5254;
+}
+
+ul li a.active:hover {
+	color: #FF5254;
+}
+
+
+
+
+
+/*Mobile */
+@media screen and (max-width: 780px) {
+
+	
+	/* display list as a block for mobile navigation */
+	ul {
+	  display: block;
+      height: 0;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+      padding:0;
+	}
+
+	ul li a:first-child  {
+		padding: 2em 0 2em 0;
+	}
+
+	ul li a {
+	  border-bottom: 2px solid #2C363F;
+      display: block;
+      font-size: 1.5em;
+      padding: .5em 0;
+	}
+
+	/*when input tag is clicked make .navItems visibile */
+	#menu-toggle:checked ~ .navItems{
+		opacity: 1;
+		height: 100vh;
+		visibility: visible;
+
+	}
+
+	/*Hamburger menu.  Background property creates lines for hamburget menu. */
+	.label-toggle {
+	  background: linear-gradient(to bottom, #2C363F 0%, #2C363F 20%, transparent 20%, transparent 40%, #2C363F 40%, #2C363F 60%, transparent 60%, transparent 80%, #2C363F 80%, #2C363F 100%);
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 22.5px;
+      width: 22.5px;
+      margin-top: 1em;
+    }
+    nav .wrapper {
+    	display: block;
+    	padding: 0 2%;
+    }
+  }
+
+
+
+
+/*
+	Header
+*/
+
+#home header {
+	position: relative; 
+}
+
+#home header:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+
+#home #bkg {
+	position: absolute;
+	width:100%;
+	z-index: -100;
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('../images/bkg-2.jpeg') no-repeat center center fixed; 
+	/* Url to image https://unsplash.com/search/dim-s?photo=3m3aAbFOJRE
+	Photo by Ashim D'Silva */
+	height:100vh;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#home header section {
+	display: flex;
+	height:100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align:center;
+}
+
+#home section .branding {
+	margin:7em auto;
+	color:white;
+}
+
+#home section .logo {
+	width:350px;
+	height: 350px;
+	margin:0 auto;
+	display: block;
+}
+
+@media screen and (max-width: 420px) {
+	#home section .logo {
+		width: 70%;
+		height: auto
+	}
+
+
+
+}
+
+
+
+/*
+	Main
+*/
+#home main {
+	margin-top: 100vh;
+	padding: 2em 0 10em;
+
+	background: #fff url('../images/arches.png'); 
+
+}
+
+#home main h1 {
+	text-align: center;
+	letter-spacing: 7px;
+}
+
+#home main section {
+	position: relative;
+	top:0;
+	left:0;
+	width: 100%;
+}
+
+#home main section .menuButtons{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+#home main section .menuButtons .ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #000;
+  border: 3px solid #2C363F;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin: 3em 4em;
+  transition: border 0.1s ease-in, background-color 0.1s ease-in,
+              color 0.1s ease-in;
+}
+
+
+#home main section .menuButtons .ghost-button:hover {
+	background-color: #2C363F;
+	color:#fff;
+	transition: background-color 0.1s ease-in,
+              color 0.1s ease-in;
+
+     }
+
+@media screen and (max-width: 720px) {
+	#home main section .menuButtons .ghost-button {
+		margin:2em 1em;
+}
+}
+
+@media screen and (max-width: 420px) {
+	#home main section .menuButtons .ghost-button {
+		margin:2em .5em;
+		font-size:14px;
+}
+}
+
+
+#home main section .menuContainer {
+	display: none;
+	flex-wrap: wrap;
+	max-width:960px;
+	margin:0 auto;
+
+}
+
+#home main section .menuContainer .item {
+	flex: 3 1 auto;
+	padding: 3%;
+	color: #2C363F;
+	border-bottom: 2px solid #2C363F;
+
+}
+
+
+#home main section .menuContainer .item h3 {
+	width: 300px;
+
+}
+
+#home main section .menuContainer .item h3, .price {
+	display: inline-block;
+}
+
+#home main section .menuContainer .price {
+	float:right;
+}
+
+#home main section .menuContainer .description {
+	padding:0;
+	margin:0;
+}
+
+
+#home main section .menuContainer.active {
+	display:flex;
+
+	/*Animation for fade in effect for active menu container  */
+    -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+         -o-animation: fadein .5s; /* Opera < 12.1 */
+            animation: fadein .5s;
+
+}
+
+/*Keyframes for Menu Container
+
+Allows for fade in effect from opacity 0 to 1 for menu items.   */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/*
+	Footer
+*/
+
+
+footer {
+	background-color: #2C363F;
+	
+
+}
+
+footer .info {
+	display:flex;
+	position: relative;
+	flex-wrap: wrap;
+	max-width:960px;
+	margin:0 auto 0;
+	color:white;
+	padding: 3%;
+	justify-content: space-between;
+}
+
+footer .info section {
+	flex: 1 0 auto;
+}
+
+footer .info section .smIcons {
+	text-align: center;
+}
+
+footer .info section i {
+	padding:.5em 0.5em 0 0 ;
+}
+
+@media screen and (max-width: 420px) {
+	footer .info {
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contant Page */
+
+
+
+#contact main {
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+
+
+
+.contactInfo {
+	flex-grow: 2;
+	flex-basis: 35%;
+	text-align: center;
+	background: #fff url('../images/arches.png'); 
+	padding-bottom: 3em;
+}
+
+.contactInfo .logo{
+	height:245px;
+	width:auto; 
+	margin-top: 2em;
+}
+
+
+#contact .ghost-button {
+  display: inline-block;
+  width:200px;
+  padding: 8px;
+  color: #fff;
+  background-color: #2C363F;
+  border: 3px solid #2C363F;
+  border-radius: 100px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out, border 0.2s ease-in;
+  margin:3em 1em;
+}
+#contact .ghost-button:hover,
+#contact .ghost-button:active {
+  background-color: #FF5254;
+  border: 3px solid #FF5254;
+
+  color: #fff;
+  transition: background-color 0.2s ease-in,
+              color 0.2s ease-in,border 0.2s ease-in;
+}
+
+@media screen and (max-width:1338px) {
+	#contact .ghost-button {
+		margin:1em;
+		width:150px;
+	}
+
+}
+
+
+
+.contactInfo table {
+	text-align: left;
+	margin: 0 auto;
+}
+
+.contactInfo table th {
+	text-align: center;
+	padding:8%;
+}
+.contactInfo table td {
+	padding: 8%;
+}
+
+.googleMaps {
+	flex-grow: 1;
+	flex-basis: 65%;
+	min-height: 450px;
+}
+
+
+iframe {
+	height:100%;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
